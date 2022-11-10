@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.phezu.util": {
+      "version": "https://github.com/harrissaleem/UnityPackages.git?path=/Assets/com.phezu.util",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "affe6a0bab7b82bd2988015d6337ea0a4f31edfb"
+    },
     "com.unity.2d.animation": {
       "version": "7.0.7",
       "depth": 1,

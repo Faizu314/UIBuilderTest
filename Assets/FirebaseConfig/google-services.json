@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "546643239907",
+    "project_id": "testingunity-eb0fb",
+    "storage_bucket": "testingunity-eb0fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:546643239907:android:b7a6a9f9a55efb53bb76d6",
+        "android_client_info": {
+          "package_name": "com.phezu.wallpaper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "546643239907-gejoc6tffmfs74pjg99ldh3fdd0dvilk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.phezu.wallpaper",
+            "certificate_hash": "f00d0b5b7ad198b38f16a1a54a85bfcf954a9673"
+          }
+        },
+        {
+          "client_id": "546643239907-gsat7uqqah78ng3egk0pukjc09c6vbrt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDh-tL51gapuTAyXsOmd-eIIl3aDHXgLUY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "546643239907-gsat7uqqah78ng3egk0pukjc09c6vbrt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
