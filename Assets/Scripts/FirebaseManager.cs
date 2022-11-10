@@ -116,16 +116,39 @@ public class FirebaseManager : Singleton<FirebaseManager> {
 
         m_Auth.SignInWithCredentialAsync(credential).ContinueWithOnMainThread(task => {
             if (task.IsCanceled) {
-                Debug.Log("Firebase sign in with credential canceled");
+                Debug.Log("Firebase sign in with google credential canceled");
                 return;
             }
             if (task.IsFaulted) {
-                Debug.LogError("Firebase sign in with credential faulted");
+                Debug.LogError("Firebase sign in with google credential faulted: " + task.Exception);
                 return;
             }
 
             m_User = m_Auth.CurrentUser;
-            Debug.LogFormat("User signed in successfully: {0} ({1})",
+            Debug.LogFormat("User signed in successfully via google: {0} ({1})",
+                m_User.DisplayName, m_User.UserId);
+        });
+    }
+    public void SignInToFirebaseViaFacebook(string facebookIdToken) {
+        if (!IsReady) {
+            Debug.Log("Accessing FirebaseManager when firebase was not ready");
+            return;
+        }
+
+        Credential credential = FacebookAuthProvider.GetCredential(facebookIdToken);
+
+        m_Auth.SignInWithCredentialAsync(credential).ContinueWithOnMainThread(task => {
+            if (task.IsCanceled) {
+                Debug.Log("Firebase sign in with facebook credential canceled");
+                return;
+            }
+            if (task.IsFaulted) {
+                Debug.LogError("Firebase sign in with facebook credential faulted: " + task.Exception);
+                return;
+            }
+
+            m_User = m_Auth.CurrentUser;
+            Debug.LogFormat("User signed in successfully via facebook: {0} ({1})",
                 m_User.DisplayName, m_User.UserId);
         });
     }

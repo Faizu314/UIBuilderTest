@@ -12,6 +12,7 @@ public class CanvasHandler : MonoBehaviour
     [SerializeField] private Button signUpButton;
     [SerializeField] private Button signInButton;
     [SerializeField] private Button googleButton;
+    [SerializeField] private Button facebookButton;
 
     private string UserEmail => emailInput.text.Trim();
     private string UserPass => passwordInput.text.Trim();
@@ -27,6 +28,10 @@ public class CanvasHandler : MonoBehaviour
 
         googleButton.onClick.AddListener(() => {
             GoogleManager.Instance.GoogleSignInClick();
+        });
+
+        facebookButton.onClick.AddListener(() => {
+            FacebookManager.Instance.FacebookSignInClick();
         });
 
         Application.logMessageReceived += OnDebugLog;
