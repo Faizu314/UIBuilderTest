@@ -21,5 +21,4 @@
     <meta-data android:name="com.facebook.sdk.AdvertiserIDCollectionEnabled" android:value="true" />
     <provider android:name="com.facebook.FacebookContentProvider" android:authorities="com.facebook.app.FacebookContentProvider1183670422227408" android:exported="true" />
   </application>
-	
 </manifest>
